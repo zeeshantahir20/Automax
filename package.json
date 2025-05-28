@@ -1,0 +1,17 @@
+{
+  "name": "full-stack-web-app",
+  "version": "1.0.0",
+  "description": "Full-stack web application with separate client, admin, and server",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "admin": "cd admin && npm run dev",
+    "server": "cd server && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run admin\"",
+    "install-all": "npm install && cd client && npm install && cd ../admin && npm install && cd ../server && npm install",
+    "setup": "node setup.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

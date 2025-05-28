@@ -1,0 +1,423 @@
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+const softwareServices = [
+  {
+    id: 1,
+    title: 'Software Sales & Licensing',
+    description: 'Official distribution and licensing of leading industrial software solutions for automation, design, and engineering.',
+    icon: '🛒',
+    benefits: [
+      'Authorized distributor pricing',
+      'License management assistance',
+      'Software version upgrades',
+      'Compliance and audit support'
+    ]
+  },
+  {
+    id: 2,
+    title: 'Implementation Services',
+    description: 'Expert installation, configuration, and deployment of industrial software solutions tailored to your specific requirements.',
+    icon: '⚙️',
+    benefits: [
+      'Customized implementation planning',
+      'System integration with existing infrastructure',
+      'Performance optimization',
+      'Migration from legacy systems'
+    ]
+  },
+  {
+    id: 3,
+    title: 'Training & Education',
+    description: 'Comprehensive training programs for your team to maximize productivity and effectiveness with industrial software tools.',
+    icon: '👨‍🏫',
+    benefits: [
+      'Customized training curriculum',
+      'Hands-on workshops',
+      'Certification preparation',
+      'Advanced user techniques'
+    ]
+  },
+  {
+    id: 4,
+    title: 'Technical Support',
+    description: 'Ongoing technical support and maintenance services to ensure smooth operation of your industrial software systems.',
+    icon: '🛠️',
+    benefits: [
+      'Rapid issue resolution',
+      'Regular maintenance updates',
+      'Performance monitoring',
+      'System health checks'
+    ]
+  }
+];
+
+const softwareProducts = [
+  {
+    id: 1,
+    title: 'E-Plan',
+    description: 'Complete electrical engineering design software for creating and managing electrical control systems, circuit diagrams, and cabinet layouts.',
+    image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    link: '/solutions/industrial-software/e-plan'
+  },
+  {
+    id: 2,
+    title: 'Siemens Software',
+    description: 'Comprehensive suite of industrial software solutions for automation, simulation, digital twins, and manufacturing operations management.',
+    image: 'https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    link: '/solutions/industrial-software/siemens-software'
+  }
+];
+
+const IndustrialSoftware = () => {
+  useEffect(() => {
+    document.title = 'Industrial Software - AUTOMAX';
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <div className="pt-16">
+      {/* Hero Section */}
+      <section className="bg-primary py-20 md:py-28">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl"
+          >
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Industrial Software</h1>
+            <p className="text-xl text-blue-100">
+              AUTOMAX provides design and engineering services, software sales & support, and training services
+              for leading industrial software solutions that drive automation and efficiency.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Overview Section */}
+      <section className="py-16 bg-white">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
+          >
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-gray-800">Industrial Software Solutions</h2>
+              <p className="text-gray-600 mb-6">
+                Modern industrial operations rely on sophisticated software solutions to design, operate, and
+                optimize complex automation systems. As an authorized partner of leading industrial software
+                providers, we offer comprehensive services for the implementation and support of cutting-edge
+                software solutions.
+              </p>
+              <p className="text-gray-600 mb-6">
+                From electrical engineering design software to advanced automation platforms, our software
+                portfolio enables organizations to improve efficiency, reduce design time, ensure accuracy,
+                and drive innovation across their engineering and manufacturing processes.
+              </p>
+              <div className="grid grid-cols-2 gap-4 mt-8">
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="text-primary font-bold text-xl mb-1">1000+</div>
+                  <p className="text-sm text-gray-600">Software implementations</p>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="text-primary font-bold text-xl mb-1">200+</div>
+                  <p className="text-sm text-gray-600">Certified specialists</p>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="text-primary font-bold text-xl mb-1">15+</div>
+                  <p className="text-sm text-gray-600">Years as authorized partner</p>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="text-primary font-bold text-xl mb-1">24/7</div>
+                  <p className="text-sm text-gray-600">Technical support</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img 
+                src="https://images.pexels.com/photos/3861943/pexels-photo-3861943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                alt="Industrial Software" 
+                className="rounded-lg shadow-lg w-full h-auto"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Software Products Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto mb-16"
+          >
+            <h2 className="text-3xl font-bold mb-4 text-gray-800">Our Software Portfolio</h2>
+            <p className="text-gray-600">
+              We partner with industry-leading software providers to offer a comprehensive range of 
+              solutions for industrial automation and engineering design.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {softwareProducts.map((product, index) => (
+              <motion.div
+                key={product.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300"
+              >
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={product.image} 
+                    alt={product.title} 
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold mb-3 text-gray-800">{product.title}</h3>
+                  <p className="text-gray-600 mb-4">{product.description}</p>
+                  <Link 
+                    to={product.link} 
+                    className="inline-block text-primary font-medium hover:text-primary-dark transition-colors"
+                  >
+                    Learn more <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 bg-white">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto mb-16"
+          >
+            <h2 className="text-3xl font-bold mb-4 text-gray-800">Comprehensive Software Services</h2>
+            <p className="text-gray-600">
+              Beyond software licensing, we provide end-to-end services to ensure successful implementation
+              and ongoing optimization of your industrial software solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {softwareServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300"
+              >
+                <div className="p-6">
+                  <div className="text-3xl mb-4">{service.icon}</div>
+                  <h3 className="text-2xl font-bold mb-3 text-gray-800">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  
+                  <h4 className="font-semibold text-gray-700 mb-2">Key Benefits:</h4>
+                  <ul className="space-y-2">
+                    {service.benefits.map((benefit, i) => (
+                      <li key={i} className="flex items-start">
+                        <svg className="w-5 h-5 text-primary mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                        </svg>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Business Benefits Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto mb-16"
+          >
+            <h2 className="text-3xl font-bold mb-4 text-gray-800">Business Benefits</h2>
+            <p className="text-gray-600">
+              Implementing the right industrial software solution can transform your engineering and 
+              manufacturing processes, delivering significant business value.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Increased Productivity',
+                description: 'Automate repetitive tasks, streamline workflows, and enable collaboration to boost team productivity by up to 30%.',
+                icon: '📈'
+              },
+              {
+                title: 'Enhanced Quality',
+                description: 'Reduce errors, ensure standards compliance, and improve documentation for consistently higher quality outputs.',
+                icon: '✓'
+              },
+              {
+                title: 'Faster Time-to-Market',
+                description: 'Accelerate design, testing, and implementation cycles to bring products and systems to market faster.',
+                icon: '🚀'
+              },
+              {
+                title: 'Cost Reduction',
+                description: 'Minimize design errors, reduce rework, optimize resource utilization, and lower overall project costs.',
+                icon: '💰'
+              },
+              {
+                title: 'Knowledge Capture',
+                description: 'Maintain organizational knowledge and enable reusability through standardized templates and best practices.',
+                icon: '🧠'
+              },
+              {
+                title: 'Digital Continuity',
+                description: 'Ensure seamless data flow from design to operations, enabling digital twin capabilities and ongoing optimization.',
+                icon: '🔄'
+              }
+            ].map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300"
+              >
+                <div className="text-3xl mb-4">{benefit.icon}</div>
+                <h3 className="text-xl font-bold mb-2 text-gray-800">{benefit.title}</h3>
+                <p className="text-gray-600">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Study Brief Section */}
+      <section className="py-16 bg-white">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
+          >
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-gray-800">Success Story</h2>
+              <h3 className="text-xl font-bold mb-3 text-gray-700">Major Pharmaceutical Manufacturer</h3>
+              <p className="text-gray-600 mb-6">
+                A leading pharmaceutical manufacturer was struggling with inefficient electrical design processes,
+                resulting in extended project timelines and frequent errors in documentation. By implementing
+                E-Plan with our comprehensive support and training, they achieved:
+              </p>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-primary mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                  </svg>
+                  <span className="text-gray-600">40% reduction in design time for control panel schematics</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-primary mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                  </svg>
+                  <span className="text-gray-600">85% reduction in documentation errors</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-primary mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                  </svg>
+                  <span className="text-gray-600">Standardized library of components for reuse across projects</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 text-primary mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                  </svg>
+                  <span className="text-gray-600">Improved coordination between engineering teams</span>
+                </li>
+              </ul>
+              <Link 
+                to="/case-studies" 
+                className="text-primary font-medium hover:text-primary-dark transition-colors"
+              >
+                View more success stories <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+            <div>
+              <img 
+                src="https://images.pexels.com/photos/3862131/pexels-photo-3862131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                alt="Success Story" 
+                className="rounded-lg shadow-lg w-full h-auto"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-blue-900 to-primary rounded-xl p-8 md:p-12 text-white shadow-xl overflow-hidden relative"
+          >
+            <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-white/10 rounded-full"></div>
+            
+            <div className="relative z-10 text-center max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+                Ready to Transform Your Engineering Processes?
+              </h2>
+              <p className="text-blue-100 mb-8 text-lg">
+                Contact our software specialists to discuss your requirements and discover how our industrial software solutions can drive efficiency and innovation in your organization.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link 
+                  to="/contact" 
+                  className="btn bg-white text-primary hover:bg-gray-100 transition-colors shadow-md"
+                >
+                  Schedule a Consultation
+                </Link>
+                <Link 
+                  to="/solutions/industrial-software/e-plan" 
+                  className="btn bg-transparent border-2 border-white text-white hover:bg-white/10 transition-colors"
+                >
+                  Explore E-Plan Solutions
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default IndustrialSoftware; 

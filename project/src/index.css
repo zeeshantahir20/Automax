@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0F52BA;
+  --primary-light: #2176FF;
+  --secondary: #00468B;
+  --accent: #E78C38;
+  --background: #FAFAFA;
+  --text: #333333;
+  --text-light: #666666;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-gray-800;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl leading-tight mb-6;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl leading-snug mb-4;
+  }
+  
+  p {
+    @apply text-base md:text-lg leading-relaxed mb-4 text-gray-700;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-md font-medium transition-all duration-300 inline-block text-center;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-700 text-white hover:bg-blue-800 shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-blue-700 border border-blue-700 hover:bg-blue-50;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+  }
+}
